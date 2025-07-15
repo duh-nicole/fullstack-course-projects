@@ -1,0 +1,11 @@
+{
+    "testing.showAllMessages": true,
+    "remote.downloadExtensionsLocally": true,
+    "remote.extensionKind": {
+
+        "pub.name": [
+            "ui"
+        ]
+    },
+    "php.validate.executablePath": "true"
+}

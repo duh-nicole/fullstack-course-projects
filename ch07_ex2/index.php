@@ -1,9 +1,10 @@
 <?php 
-    //set default value of variables for initial page load
-    if (!isset($investment)) { $investment = '10000'; } 
-    if (!isset($interest_rate)) { $interest_rate = '5'; } 
-    if (!isset($years)) { $years = '5'; } 
-?>
+    //set default value for initial page load
+    $investment = $_POST['investmentAmount'] ?? '10000';
+    $interest_rate = $_POST['yearlyInterestRate'] ?? '5';
+    $years = $_POST['years'] ?? '5';
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,28 +17,49 @@
     <h1>Future Value Calculator</h1>
     <?php if (!empty($error_message)) { ?>
         <p class="error"><?php echo $error_message; ?></p>
-    <?php } // end if ?>
+    <?php } 
+    ?>
     <form action="display_results.php" method="post">
 
         <div id="data">
-            <label>Investment Amount:</label>
-            <input type="text" name="investment"
-                   value="<?php echo $investment; ?>"/><br>
+            <label for="investmentAmount">Investment Amount:</label>
+            <select id="investmentAmount" name="investmentAmount">
+                <?php
+                // The loop for the Investment Amount
+                // increasing by 5000
+                for ($i = 10000; $i <= 50000; $i +=5000) {
+                    $displayValue = number_format($i);
+                    $selected = ($i == $investment) ? 'selected="selected"' : '';
+                    echo "<option value=\"$i\" $selected>$$displayValue</option>";
+                }
+                ?>
+            </select>
+            <br>
 
-            <label>Yearly Interest Rate:</label>
-            <input type="text" name="interest_rate"
-                   value="<?php echo $interest_rate; ?>"/><br>
+            <label for="yearlyInterestRate">Yearly Interest Rate:</label>
+            <select id="yearlyInterestRate" name="yearlyInterestRate">
+                <?php
+                // The loop for Yearly Interest Rate
+                // increasing by .5
+                for ($i = 4.0; $i <= 12.0; $i += 0.5) {
+                    $displayValue = number_format($i, 1);
+                    $selected = ($i == $interest_rate) ? 'selected="selected"' : '';
+                    echo "<option value=\"$i\" $selected>$displayValue%</option>";
+                }
+                ?>
+            </select>
+            <br>
 
-            <label>Number of Years:</label>
-            <input type="text" name="years"
-                   value="<?php echo $years; ?>"/><br>
+            <label for="numberYears">Number of Years:</label>
+            <input type="number" name="years" id="numberYears"
+                value="<?php echo htmlspecialchars($years); ?>"/>
+            <br>
         </div>
 
         <div id="buttons">
             <label>&nbsp;</label>
             <input type="submit" value="Calculate"/><br>
         </div>
-
     </form>
     </main>
 </body>
