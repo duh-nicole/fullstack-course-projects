@@ -7,5 +7,6 @@
             "ui"
         ]
     },
-    "php.validate.executablePath": "true"
+    "php.validate.executablePath": "true",
+    "db2forzosdeveloperextension.trace.server": "verbose"
 }
