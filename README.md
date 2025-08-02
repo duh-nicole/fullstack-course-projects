@@ -1,31 +1,17 @@
-# Full Stack App – Work In Progress 🚧
+# ☕ Project Name (e.g., Bean Counter)
 
-## Overview
-This is a full stack app using **Vite + React** on the frontend and **Express.js** on the backend.
+A cozy CRUD-based app for managing data, built as part of the CodeLatte series under Softstack Studios.
 
-## ✅ Completed
-- Vite + React client setup
-- Express backend setup
-- CORS and dotenv middleware
-- Basic root routes for frontend and backend
-- React Router wired up
+## 📦 Features
+- Create, read, update, and delete entries
+- Simple, clean UI
+- File-based data persistence
 
-## 🚧 In Progress
-- User authentication
-- API routes for CRUD operations
-- Database integration
-- UI components and styling
-- Connecting frontend to backend
+## 🔧 Built With
+- Python 3.x
+- Optional: Flask / SQLite / JSON / etc.
 
-## 🔧 To Run
-
+## 🚀 How to Run
 ```bash
-# client
-cd client
-npm install
-npm run dev
+python main.py
 
-# server
-cd server
-npm install
-node server.js
