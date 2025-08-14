@@ -1,0 +1,112 @@
+/* main.css for the Final Project */
+
+
+/* Import the retro pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+body {
+  font-family: 'Pixelify Sans', sans-serif;
+  background-color: #e0f2f1; /* Soft pastel mint background */
+  color: #3d5a80; /* Dark blue for a professional touch */
+  margin: 0;
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 0px 0px #98c1d9; /* Soft, pixelated shadow */
+  border-radius: 12px; /* Rounded corners */
+  border: 2px solid #3d5a80;
+}
+
+h1, h2, h3 {
+  color: #ee6c4d; /* Fun coral for headings */
+  border-bottom: 2px solid #e0f2f1;
+  padding-bottom: 10px;
+}
+
+/* Table styling for grades */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: 2px solid #3d5a80;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures rounded corners apply to content */
+}
+
+thead th {
+  background-color: #98c1d9; /* Soft sky blue */
+  color: #ffffff;
+  text-align: left;
+  padding: 12px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #e0f2f1;
+}
+
+.grade-row {
+  font-weight: bold;
+  background-color: #fff3e0; /* A soft cream */
+}
+
+.grade-percentage {
+  color: #ee6c4d; /* Coral to stand out */
+}
+
+/* Extra Credit Form Styling */
+.form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 2px solid #3d5a80;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 0px 0px #98c1d9;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 2px solid #98c1d9;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  background-color: #ffc0cb; /* Pastel pink */
+  color: #3d5a80;
+  padding: 10px 15px;
+  border: 2px solid #3d5a80;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px 0px #3d5a80;
+}
+
+.form-container button:hover {
+  background-color: #ff99ab; /* A slightly darker pink on hover */
+  transform: translate(1px, 1px);
+  box-shadow: 0 0 0 0 #3d5a80;
+}
